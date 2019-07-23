@@ -180,7 +180,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="JAVA学习-1"><a href="#JAVA学习-1" class="headerlink" title="JAVA学习(1)"></a>JAVA学习(1)</h1><h2 id="0X01-JAVA简介"><a href="#0X01-JAVA简介" class="headerlink" title="0X01 JAVA简介"></a>0X01 JAVA简介</h2><h3 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h3><p>JAVA虚拟机 JAVA技术的核心</p>
+<p>源文件（.java）————》编译器————》字节码文件————》解释器————》（.class)————》my program</p>
+<h3 id="JDK-JRE"><a href="#JDK-JRE" class="headerlink" title="JDK/JRE"></a>JDK/JRE</h3><p>JDK：Java开发工具包 development kit<br>JRE：Java运行时环境 runtime enviroment</p>
+<h2 id="JAVA环境搭建"><a href="#JAVA环境搭建" class="headerlink" title="JAVA环境搭建"></a>JAVA环境搭建</h2><ol>
+<li><p>安装JDK<br>根据系统和位数选择<br>bin目录：包含了很多可执行文件<br>lib目录：java开发中会使用到的库文件</p>
+</li>
+<li><p>配置环境变量<br>JAVA_HOEM  配置JDK安装路径<br>PATH       配置JDK命令文件的位置(bin)<br>CLASSPATH  配置类库文件的位置</p>
+</li>
+</ol>
+<h2 id="0X02编写Java程序"><a href="#0X02编写Java程序" class="headerlink" title="0X02编写Java程序"></a>0X02编写Java程序</h2><p><code>public class HelloHaidai{
+    public static void main(String[] args){
+        System.out.println(&quot;I am Haidai!&quot;);
+    }
+}</code><br>PS:Java语言大小写敏感</p>
+<h2 id="0X03-使用eclipse开发java程序"><a href="#0X03-使用eclipse开发java程序" class="headerlink" title="0X03 使用eclipse开发java程序"></a>0X03 使用eclipse开发java程序</h2><ol>
+<li><p>创建Java项目 Java project</p>
+</li>
+<li><p>创建程序包<br>便于程序的管理，便于源代码的管理，防止重名问题</p>
+</li>
+<li><p>编写Java源程序</p>
+</li>
+<li><p>运行Java程序</p>
+</li>
+</ol>
+<h2 id="0X04-关键词和标识符"><a href="#0X04-关键词和标识符" class="headerlink" title="0X04 关键词和标识符"></a>0X04 关键词和标识符</h2><blockquote>
+<p>使用标识符时，需要遵守几条规则：<br>1.标识符可以由<strong>字母、数字、下划线（_）、美元符（$）</strong>组成，但不能包含 @、%、空格等其它特殊字符，不能以数字开头。譬如：123name 就是不合法滴</p>
+<p>2.标识符不能是 Java 关键字和保留字（ Java 预留的关键字，以后的升级版本中有可能作为关键字），但可以包含关键字和保留字。如：不可以使用 void 作为标识符，但是 Myvoid 可以</p>
+<p>3.标识符是严格区分大小写的。</p>
+<p>4.标识符的命名最好能反映出其作用，做到见名知意。</p>
+</blockquote>
+<h2 id="0X05-变量名"><a href="#0X05-变量名" class="headerlink" title="0X05 变量名"></a>0X05 变量名</h2><blockquote>
+<p><img src="http://img.mukewang.com/536887ea0001bf2004800148.jpg" alt="变量命名规则"><br>1、变量名由多单词组成时，第一个单词的首字母小写，其后单词的首字母大写，俗称骆驼式命名法（也称驼峰命名法），如 myAge</p>
+<p>2、变量命名时，尽量简短且能清楚的表达变量的作用，做到见名知意。如：定义变量名 stuName 保存“学生姓名”信息</p>
+<p>PS： Java 变量名的长度没有限制，但 Java 语言是区分大小写的，所以 price 和 Price 是两个完全不同的变量！</p>
+</blockquote>
+<h2 id="0X06-Java的数据类型"><a href="#0X06-Java的数据类型" class="headerlink" title="0X06 Java的数据类型"></a>0X06 Java的数据类型</h2><ul>
+<li>Java 语言是一种强类型语言</li>
+<li>在 Java 的领域里，基本数据类型变量存的是数据本身，而引用类型变量存的是保存数据的空间地址。<br>ps:常量用final关键词</li>
+</ul>
+<h2 id="0X07-Java注释"><a href="#0X07-Java注释" class="headerlink" title="0X07 Java注释"></a>0X07 Java注释</h2><blockquote>
+<p><img src="http://img.mukewang.com/535ce105000118b504440337.jpg" alt="注释方法"></p>
+</blockquote>
+
       
 
       
