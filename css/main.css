@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b488ff;
+  background: #7fd2be;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3034,10 +3034,6 @@ pre .javascript .function {
 .posts-expand .post-eof {
   margin: 0px;
   background-color: rgba(255,255,255,0);
-}
-.pagination {
-  border: none;
-  margin: 0px;
 }
 .posts-collapse {
   margin: 50px 0px;
