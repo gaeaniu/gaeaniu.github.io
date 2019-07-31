@@ -113,7 +113,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Java,多态,">
 
 
 
@@ -124,18 +124,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="hacker computer music guitar">
+<meta name="description" content="Java多态多态：对象的多种形态  引用多态父类的引用可以指向本类的对象父类的引用可以指向子类的对象 public static void main(Stringll args){ //TODO Auto-generated method stub      Animal obj1=new Animal();      Animal obj2=new Dog0;      方法多态 1234567">
+<meta name="keywords" content="Java,多态">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/hello-world/index.html">
+<meta property="og:title" content="Java入门学习(4)">
+<meta property="og:url" content="http://yoursite.com/Java入门学习-4/index.html">
 <meta property="og:site_name" content="海带排骨Hai">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Java多态多态：对象的多种形态  引用多态父类的引用可以指向本类的对象父类的引用可以指向子类的对象 public static void main(Stringll args){ //TODO Auto-generated method stub      Animal obj1=new Animal();      Animal obj2=new Dog0;      方法多态 1234567">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-22T01:30:15.248Z">
+<meta property="og:updated_time" content="2019-07-31T09:05:24.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Java入门学习(4)">
+<meta name="twitter:description" content="Java多态多态：对象的多种形态  引用多态父类的引用可以指向本类的对象父类的引用可以指向子类的对象 public static void main(Stringll args){ //TODO Auto-generated method stub      Animal obj1=new Animal();      Animal obj2=new Dog0;      方法多态 1234567">
 
 
 
@@ -165,13 +165,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/Java入门学习-4/">
 
 
 
 
 
-  <title>Hello World | 海带排骨Hai</title>
+  <title>Java入门学习(4) | 海带排骨Hai</title>
   
 
 
@@ -308,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Java入门学习-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Haidai Paigu">
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Java入门学习(4)</h1>
         
 
         <div class="post-meta">
@@ -337,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-22T09:30:15+08:00">
-                2019-07-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-31T17:04:30+08:00">
+                2019-07-31
               </time>
             
 
@@ -347,6 +347,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java入门学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Java入门学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -375,19 +397,67 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h3 id="Java多态"><a href="#Java多态" class="headerlink" title="Java多态"></a>Java多态</h3><p>多态：对象的多种形态</p>
+<ol>
+<li><p>引用多态<br>父类的引用可以指向本类的对象<br>父类的引用可以指向子类的对象</p>
+<pre><code>public static void main(Stringll args){
+//TODO Auto-generated method stub 
+    Animal obj1=new Animal(); 
+    Animal obj2=new Dog0;     </code></pre></li>
+<li><p>方法多态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public static void main（Stringl]args）（</span><br><span class="line">	//TODO Auto-generated method stub </span><br><span class="line">	Animal obj1=new Animal();</span><br><span class="line">	Animal obj2=new Dog();//父类的引用是可以指向子类对象的</span><br><span class="line">	//Dog obj3=new Animal();//错</span><br><span class="line">	objl.eat();</span><br><span class="line">	obj2.ea();</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</li>
+</ol>
+<h3 id="多态中的引用类型转换"><a href="#多态中的引用类型转换" class="headerlink" title="多态中的引用类型转换"></a>多态中的引用类型转换</h3><ol>
+<li><p>向上类型转换<br>向上类型转换（隐式/自动类型转换），是小类型到大类型的转换<br>无风险</p>
+</li>
+<li><p>向下类型转换<br>向下类型转换（强制类型转换），是大类型到小类型<br>有风险</p>
+</li>
+<li><p>instanceof运算符，解决引用对象的类型，避免类型转换的安全性问题</p>
+</li>
+</ol>
+<h3 id="Java中的抽象类"><a href="#Java中的抽象类" class="headerlink" title="Java中的抽象类"></a>Java中的抽象类</h3><ol>
+<li><p>语法定义<br>抽象类前使用abstract关键字修饰，则该类为抽象类。</p>
+</li>
+<li><p>应用场景<br>在某些情况下，某个父类只是知道其子类应该包含怎样的方法，但无法准确知道这些子类如何实现这些方法。<br>从多个具有相同特征的类中抽象出一个抽象类，以这个抽象类作为子类的模板，从而避免了子类设计的随意性。</p>
+</li>
+<li><p>作用<br>限制规定子类必须实现某些方法，但不关注实现细节</p>
+</li>
+<li><p>使用规则</p>
+</li>
+</ol>
+<ul>
+<li>abstract定义抽象类</li>
+<li>abstract定义抽象方法，只有声明，不需要实现</li>
+<li>包含抽象方法的类是抽象类</li>
+<li>抽象类中可以包含普通的方法，也可以没有抽象方法</li>
+</ul>
+<h3 id="Java中的接口"><a href="#Java中的接口" class="headerlink" title="Java中的接口"></a>Java中的接口</h3><ol>
+<li><p>接口概念<br>类是一种具体实现体，而接口定义了某一批类所需要遵守的规范，接口不关心这些类的内部数据，也不关心这些类里方法的实现细节，它只规定这些类里必须提供某些方法。</p>
+</li>
+<li><p>接口的定义<br>和类定义不同，定义接口不再使用class关键字，而是使用interface关键字。</p>
+<blockquote>
+<p><em>常量</em>：接口中的属性是常量，即使定义时不添加public static final 修饰符，系统也会自动加上。<br><em>方法</em>：接口中的方法只能是抽象方法，总是使用，即使定义时不添加public abstract 修饰符，系统也会自动加上。</p>
+</blockquote>
+</li>
+<li><p>接口定义的基本语法<br>[修饰符]interface接口名[extends父接口1，父接口2..]<br>{零个到多个常量定义…<br>零个到多个抽象方法的定义…<br>}<br>接口就是用来被继承、被实现的，修饰符一般建议用public<br>注意：不能使用<strong>private和protected</strong>修饰接口</p>
+</li>
+<li><p>使用接口<br>一个类可以实现一个或多个接口，实现接口使用implements关键字。Java中一个类只能继承一个父类，是不够灵活的，通过实现多个接口可以做补充。</p>
+</li>
+</ol>
+<blockquote>
+<p>PS：接口中方法不能有方法体，同时方法的访问修饰符不能是 private 和 protected</p>
+</blockquote>
+<h3 id="UML简介"><a href="#UML简介" class="headerlink" title="UML简介"></a>UML简介</h3><ol>
+<li><p>UML概念<br>Unified Modeling Language（UML）<br>又称统一建模语言或标准建模语言<br>是一个支持模型化和软件系统开发的图形化语言<br>为软件开发的所有阶段提供模型化和可视化支持</p>
+</li>
+<li><p>UML图示<br>UML 2.2 中一共定义了14种图示diagrams</p>
+</li>
+<li><p>常用的UML图</p>
+</li>
+</ol>
+<p><strong>用例图</strong>：用例图能够以可视化的方式，表达系统如何满足所收集的业务规则，以及特定的用户需求等信息。<br><strong>序列图</strong>：序列图用于按照交互发生的一系列顺序，显示对象之间的这些交互。<br><strong>类图</strong>：UML类图、业务逻辑和所有支持结构一同被用于定义全部的代码结构。</p>
 
       
     </div>
@@ -403,6 +473,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/多态/" rel="tag"># 多态</a>
+          
+        </div>
+      
 
       
       
@@ -412,15 +490,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/Java入门学习-3/" rel="next" title="Java入门学习(3)">
+                <i class="fa fa-chevron-left"></i> Java入门学习(3)
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/开始我的第一个记录/" rel="prev" title="开始我的第一个记录">
-                开始我的第一个记录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -554,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java多态"><span class="nav-number">1.</span> <span class="nav-text">Java多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多态中的引用类型转换"><span class="nav-number">2.</span> <span class="nav-text">多态中的引用类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中的抽象类"><span class="nav-number">3.</span> <span class="nav-text">Java中的抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中的接口"><span class="nav-number">4.</span> <span class="nav-text">Java中的接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UML简介"><span class="nav-number">5.</span> <span class="nav-text">UML简介</span></a></li></ol></div>
             
 
           </div>
