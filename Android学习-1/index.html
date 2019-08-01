@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Android,Android项目结构,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Android的四大组件 Android系统四大组件分别是活动（Activity）、服务（Service）、广播接收器（BroadcastReceiver） 和内容提供器（Content Provider）。其中活动是所有Android应用程序的门面， 凡是在应用中你看得到的东西，都是放在活动中的。而服务就比较低调了，你无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续">
+<meta name="keywords" content="Android,Android项目结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android学习(1)">
+<meta property="og:url" content="http://yoursite.com/Android学习-1/index.html">
+<meta property="og:site_name" content="海带排骨Hai">
+<meta property="og:description" content="Android的四大组件 Android系统四大组件分别是活动（Activity）、服务（Service）、广播接收器（BroadcastReceiver） 和内容提供器（Content Provider）。其中活动是所有Android应用程序的门面， 凡是在应用中你看得到的东西，都是放在活动中的。而服务就比较低调了，你无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/Android学习-1/pro_stru.png">
+<meta property="og:image" content="http://yoursite.com/Android学习-1/app_stru.png">
+<meta property="og:updated_time" content="2019-08-01T09:35:03.847Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android学习(1)">
+<meta name="twitter:description" content="Android的四大组件 Android系统四大组件分别是活动（Activity）、服务（Service）、广播接收器（BroadcastReceiver） 和内容提供器（Content Provider）。其中活动是所有Android应用程序的门面， 凡是在应用中你看得到的东西，都是放在活动中的。而服务就比较低调了，你无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续">
+<meta name="twitter:image" content="http://yoursite.com/Android学习-1/pro_stru.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/Android学习-1/">
+
+
+
+
+
+  <title>Android学习(1) | 海带排骨Hai</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">海带排骨Hai</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">爱你自己的命运</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Android学习-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Haidai Paigu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海带排骨Hai">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android学习(1)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-01T17:33:31+08:00">
+                2019-08-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Android的四大组件"><a href="#Android的四大组件" class="headerlink" title="Android的四大组件"></a>Android的四大组件</h3><blockquote>
+<p>Android系统四大组件分别是活动（Activity）、服务（Service）、广播接收器（BroadcastReceiver） 和内容提供器（Content Provider）。其中活动是所有Android应用程序的门面， 凡是在应用中你看得到的东西，都是放在活动中的。而服务就比较低调了，你无法看到它，但它会一直在后台默默地运行，即使用户退出了应用，服务仍然是可以继续运行的。广播接收器允许你的应用接收来自各处的广播消息， 比如电话、 短信等，当然你的应用同样也可以向外发出广播消息。内容提供器则为应用程序之间共享数据提供了可能， 比如你想要读取系统电话簿中的联系人，就需要通过内容提供器来实现。</p>
+</blockquote>
+<h3 id="Android的项目结构"><a href="#Android的项目结构" class="headerlink" title="Android的项目结构"></a>Android的项目结构</h3><p><img src="/Android学习-1/pro_stru.png" alt="Android项目结构"></p>
+<ol>
+<li><p>.gradle和.idea<br>这两个目录放置的是Android studio自动生成的文件，不需要关心</p>
+</li>
+<li><p>app<br>该目录存放了项目中的代码、资源等内容，开发工作基本都在这个目录下进行</p>
+</li>
+<li><p>build<br>该目录包含了一些在编译时自动生成的文件。</p>
+</li>
+<li><p>gradle<br>该目录下包含gradle wrapper 的配置文件，使用gradle wrapper的方式不需要提前将gradle下载好，而是自动根据本地缓存情况决定是否联网下载。Android studio默认不启用gradle wrapper，但可以点击Android Studio导航栏→File→Settings→Build, Execution, Deployment→Gradle， 进行配置更改。</p>
+</li>
+<li><p>.gitignore<br>用于排除指定目录或文件在版本控制之外</p>
+</li>
+<li><p>build.gradle<br>项目全局的gradle构建脚本，这个文件的内容一般不用修改</p>
+</li>
+<li><p>gradle.properties<br>全局的gradle配置文件，在这里配置的属性会影响到项目中所有的gradle编译脚本。</p>
+</li>
+<li><p>gradlew和gradle.bat<br>这两个文件用来在命令行中执行gradle命令，其中gradlew’在Linux或Mac系统中使用，gradle.bat在Windows系统中使用（批处理脚本）。</p>
+</li>
+<li><p>HelloWorld.iml<br>iml文件是所有IntelliJ IDEA项目都会自动生成的一个文件，用于标识</p>
+</li>
+<li><p>local.properties<br>这个文件用于指定本机中的Android SDK路径，通常内容都是自动生成的，不用修改，除非本机的Android SDK位置变化。</p>
+</li>
+<li><p>settings.gradle<br>这个文件用于指定项目中所有引入的模块。由于HelloWorld项目中就只有一个app模块， 因此该文件中也就只引入了app这一个模块。 通常情况下模块的引入都是自动完成的， 需要我<br>们手动去修改这个文件的场景可能比较少。</p>
+</li>
+</ol>
+<h4 id="app目录下的结构"><a href="#app目录下的结构" class="headerlink" title="app目录下的结构"></a>app目录下的结构</h4><p><img src="/Android学习-1/app_stru.png" alt="app目录结构"></p>
+<ol>
+<li><p>build<br>主要包含了一些在编译时自动生成的文件</p>
+</li>
+<li><p>libs<br>如果项目中使用到了第三方jar包， 就需要把这些jar包都放在libs目录下，放在这个目录下的jar包都会被自动添加到构建路径里去。</p>
+</li>
+<li><p>androidTest<br>此处用于编写Android Test测试用例，可以对项目进行自动化测试。</p>
+</li>
+<li><p>java<br>放置Java代码</p>
+</li>
+<li><p>res<br>该目录包括项目中所有的图片、布局、字符串等资源，图片放在drawable目录下， 布局放在layout目录下， 字符串放在values目录下</p>
+</li>
+<li><p>AndroidManifest.xml<br>这是你整个Android项目的配置文件，在程序中定义的所有四大组件都需要在这个文件里注册，另外还可以在这个文件中给应用程序添加权限声明。</p>
+</li>
+<li><p>test<br>用于编写Unit Test测试用例，是对项目进行自动化测试的另一种方式</p>
+</li>
+<li><p>.gitignore<br>这个文件用于将app模块内的指定的目录或文件排除在版本控制之外，作用和外层的.gitignore文件类似。</p>
+</li>
+<li><p>app.iml<br>IntelliJ IDEA项目自动生成的文件</p>
+</li>
+<li><p>build.gradle<br>这是app模块的gradle构建脚本， 这个文件中会指定很多项目构建相关的配置</p>
+</li>
+<li><p>proguard-rules.pro<br>这个文件用于指定项目代码的混淆规则，当代码开发完成后打成安装包文件，如果不希望代码被别人破解，通常会将代码进行混淆，从而让破解者难以阅读。</p>
+</li>
+</ol>
+<h3 id="HellpWorld项目初步分析"><a href="#HellpWorld项目初步分析" class="headerlink" title="HellpWorld项目初步分析"></a>HellpWorld项目初步分析</h3><h4 id="AndroidManifest-xml"><a href="#AndroidManifest-xml" class="headerlink" title="AndroidManifest.xml"></a>AndroidManifest.xml</h4><p>为了了解新建的HelloWorld项目是如何运行的，首先要对AndroidManifest.xml文件进行初步的分析。<br>首先，AndroidManifest.xml文件是一个配置文件，四大组件都需要先在此声明、注册了才能正常启用。<br>打开AndroidManifest.xml文件，可以看到如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity android:name=&quot;.MainActivity&quot;&gt;</span><br><span class="line">    &lt;intent-filter&gt;</span><br><span class="line">        &lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">        &lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br><span class="line">    &lt;/intent-filter&gt;</span><br><span class="line">&lt;/activity&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码表示对MainActivity这个活动进行注册，其中intent-filter里的两行代码中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;action android:name=&quot;android.intent.action.MAIN&quot; /&gt;</span><br><span class="line">&lt;category android:name=&quot;android.intent.category.LAUNCHER&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>表示MainActivity是这个项目的主活动，在手机上点击应用图标，首先启动的就是这个活动。</p>
+<h4 id="MainActivity"><a href="#MainActivity" class="headerlink" title="MainActivity"></a>MainActivity</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends AppCompatActivity &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>MainActivity是继承自AppCompatActivity的，这是一种向下兼容的Activity，可以将Activity在各个系统版本中增加的特性和功能最低兼容到Android2.1系统。<br>MainActivity中只有一个onCreate()方法，这个该方法在活动被创建时一定要执行。<br>但是可以看到这两行代码中并没有<code>Hello World!</code>字样<br>这是因为Android程序的设计讲究逻辑和视图分离，因此一般是在布局文件中编写界面，然后在活动中引入进来。<br>在onCreate()方法中，使用的setContentView()方法，这个方法给当前活动引入了一个<code>activity_main</code>的布局。</p>
+<h4 id="activity-main"><a href="#activity-main" class="headerlink" title="activity_main"></a>activity_main</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;TextView</span><br><span class="line">       android:layout_width=&quot;wrap_content&quot;</span><br><span class="line">       android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">       android:text=&quot;Hello World!&quot;</span><br><span class="line">       app:layout_constraintBottom_toBottomOf=&quot;parent&quot;</span><br><span class="line">       app:layout_constraintLeft_toLeftOf=&quot;parent&quot;</span><br><span class="line">       app:layout_constraintRight_toRightOf=&quot;parent&quot;</span><br><span class="line">       app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>打开activity_main后可以发现，这里有一个textview。这是Android系统提供的一个控件，用于在布局中显示文字。</p>
+<h4 id="strings-xml"><a href="#strings-xml" class="headerlink" title="strings.xml"></a>strings.xml</h4><p>打开res/values/strings.xml文件，内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;resources&gt;</span><br><span class="line">    &lt;string name=&quot;app_name&quot;&gt;Hello World&lt;/string&gt;</span><br><span class="line">&lt;/resources&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这里定义了一个应用程序名的字符串，可以使用两种方式来引用它。</p>
+<ul>
+<li>在代码中通过R.string.app_name</li>
+<li>在xml文件中通过@string/app_name</li>
+</ul>
+<p>如果是图片资源就换成drawable，如果引用图标就换成mipmap，布局文件就换成layout<br>一个例子，打开AndroidManifest.xml文件，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;application</span><br><span class="line">    android:icon=&quot;@mipmap/ic_launcher&quot;</span><br><span class="line">    android:label=&quot;@string/app_name&quot;</span><br><span class="line">    android:roundIcon=&quot;@mipmap/ic_launcher_round&quot;</span><br><span class="line">    android:supportsRtl=&quot;true&quot;</span><br><span class="line">    android:theme=&quot;@style/AppTheme&quot;&gt;</span><br><span class="line">    ...</span><br><span class="line">&lt;/application&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+          
+            <a href="/tags/Android项目结构/" rel="tag"><i class="fa fa-tag"></i> Android项目结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Java入门学习-4/" rel="next" title="Java入门学习(4)">
+                <i class="fa fa-chevron-left"></i> Java入门学习(4)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="Haidai Paigu">
+            
+              <p class="site-author-name" itemprop="name">Haidai Paigu</p>
+              <p class="site-description motion-element" itemprop="description">做一锅好喝的海带排骨汤</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android的四大组件"><span class="nav-number">1.</span> <span class="nav-text">Android的四大组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Android的项目结构"><span class="nav-number">2.</span> <span class="nav-text">Android的项目结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#app目录下的结构"><span class="nav-number">2.1.</span> <span class="nav-text">app目录下的结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HellpWorld项目初步分析"><span class="nav-number">3.</span> <span class="nav-text">HellpWorld项目初步分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#AndroidManifest-xml"><span class="nav-number">3.1.</span> <span class="nav-text">AndroidManifest.xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MainActivity"><span class="nav-number">3.2.</span> <span class="nav-text">MainActivity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#activity-main"><span class="nav-number">3.3.</span> <span class="nav-text">activity_main</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strings-xml"><span class="nav-number">3.4.</span> <span class="nav-text">strings.xml</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Haidai Paigu</span>
+
+  
+</div>
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+-->
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
